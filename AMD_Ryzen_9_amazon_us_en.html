@@ -8,7 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Amd Ryzen 9 - RAM Price Check">
     <meta name="description" content="Find the best DDR5 RAM prices • Real-time comparison • Updated automatically">
-    <meta name="keywords" content="DDR5 RAM, RAM prices, memory comparison, Amd Ryzen 9 - RAM Price Check">
+    <meta name="keywords" content="CPU prices, processor comparison, Intel Core, AMD Ryzen, Amd Ryzen 9 - RAM Price Check">
     <meta name="author" content="CPU Price Check">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cpupricecheck.com/AMD_Ryzen_9_amazon_us_en.html">
@@ -37,7 +37,63 @@
     <script type="application/ld+json">
     [{"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen 9 9950X3D 16-Core Processor", "image": "https://m.media-amazon.com/images/I/71hZfMZNZuL._AC_UY218_.jpg", "description": "Amd Ryzen 9 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0DVZSG8D5?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen™ 9 9950X 16-Core, 32-Thread Unlocked Desktop Processor", "image": "https://m.media-amazon.com/images/I/61dukbEGziL._AC_UY218_.jpg", "description": "Amd Ryzen 9 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0D6NNRBGP?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen 9 7900 12-Core, 24-Thread Unlocked Desktop Processor", "image": "https://m.media-amazon.com/images/I/51pVndhjsYL._AC_UY218_.jpg", "description": "Amd Ryzen 9 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0BMQK718H?tag=aptive-20", "priceCurrency": "USD", "price": "EUR 348.10", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "RYZEN 7 9800X3D 8-Core, 16-Thread Desktop Processor", "image": "https://m.media-amazon.com/images/I/71aHvYUgX1L._AC_UY218_.jpg", "description": "Amd Ryzen 9 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0DKFMSMYK?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen 9 9900X3D 12-Core Processor", "image": "https://m.media-amazon.com/images/I/51iH16H8wgL._AC_UY218_.jpg", "description": "Amd Ryzen 9 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0DWGWN8GY?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}]
     </script>
-    <!-- Google Analytics: Add your ID in config.py -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-884H2B9G68"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Configuration GA4 avec enhanced measurement
+        gtag('config', 'G-884H2B9G68', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track outbound links (Amazon clicks)
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href*="amazon.com"]');
+            if (link) {
+                const href = link.getAttribute('href');
+                const card = link.closest('.product-card');
+                const title = card?.querySelector('.product-title')?.textContent || 'Unknown';
+                const priceText = card?.querySelector('.product-price')?.textContent || '0';
+                const price = parseFloat(priceText.replace('$', '').replace(',', ''));
+                
+                // Event GA4 standardisé pour clicks Amazon
+                gtag('event', 'click_amazon', {
+                    'event_category': 'outbound',
+                    'event_label': title.trim(),
+                    'product_name': title.trim(),
+                    'price': price,
+                    'value': price,
+                    'link_url': href,
+                    'link_domain': 'amazon.com'
+                });
+                
+                // Aussi envoyer comme outbound_click (standard GA4)
+                gtag('event', 'outbound_click', {
+                    'link_url': href,
+                    'link_domain': 'amazon.com',
+                    'outbound': true
+                });
+            }
+        });
+        
+        // Track page engagement
+        let engagementTimer = 0;
+        setInterval(function() {
+            engagementTimer += 10;
+            if (engagementTimer % 30 === 0) {  // Tous les 30s
+                gtag('event', 'user_engagement', {
+                    'engagement_time_msec': engagementTimer * 1000
+                });
+            }
+        }, 10000);
+    </script>
+    
     <style>
         
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -826,7 +882,7 @@ header .signature-aptive {
             <span class="signature-aptive">by Aptive</span>
             <p class="subtitle">Amd Ryzen 9</p>
             <div class="badge">🤖 Auto-updated</div>
-            <p class="update-time">Last update: 2026-02-08 20:13 UTC</p>
+            <p class="update-time">Last update: 2026-02-10 02:28 UTC</p>
         </header>
         
         <div class="products-grid">

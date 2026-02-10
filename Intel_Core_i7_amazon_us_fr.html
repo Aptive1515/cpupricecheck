@@ -8,7 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Intel Core I7 - RAM Price Check">
     <meta name="description" content="Trouvez les meilleurs prix RAM DDR5 • Comparaison en temps réel • Mise à jour automatique">
-    <meta name="keywords" content="DDR5 RAM, RAM prices, memory comparison, Intel Core I7 - RAM Price Check">
+    <meta name="keywords" content="CPU prices, processor comparison, Intel Core, AMD Ryzen, Intel Core I7 - RAM Price Check">
     <meta name="author" content="CPU Price Check">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cpupricecheck.com/Intel_Core_i7_amazon_us_fr.html">
@@ -37,7 +37,63 @@
     <script type="application/ld+json">
     [{"@context": "https://schema.org/", "@type": "Product", "name": "Core™ i7-14700KF New Gaming Desktop Processor 20 cores (8 P-cores + 12 E-cores) - Unlocked", "image": "https://m.media-amazon.com/images/I/61JhyZyKOcL._AC_UY218_.jpg", "description": "Intel Core I7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0CGJC178L?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core™ i7-14700K New Gaming Desktop Processor 20 cores (8 P-cores + 12 E-cores) with Integrated Graphics - Unlocked", "image": "https://m.media-amazon.com/images/I/61aAAg73uLL._AC_UY218_.jpg", "description": "Intel Core I7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0CGJ41C9W?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "BX80677I77700 Core i7-7700 Desktop Processor 8M Cache, 3.6GHz (Max Turbo Frequency 4.20GHz) 7th Generation", "image": "https://m.media-amazon.com/images/I/61vkuZN5JsL._AC_UY218_.jpg", "description": "Intel Core I7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B01N0L41N7?tag=aptive-20", "priceCurrency": "USD", "price": "EUR 86.71", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core i7-12700K Gaming Desktop Processor with Integrated Graphics and 12 (8P+4E) Cores up to 5.0 GHz Unlocked LGA1700 600 Series Chipset 125W", "image": "https://m.media-amazon.com/images/I/51NlTpm+7KL._AC_UY218_.jpg", "description": "Intel Core I7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B09FXNVDBJ?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core i7-14700F Desktop Processor 20 cores (8 P-cores + 12 E-cores) up to 5.4 GHz", "image": "https://m.media-amazon.com/images/I/51EL514uLrL._AC_UY218_.jpg", "description": "Intel Core I7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0CQ1P2TRN?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}]
     </script>
-    <!-- Google Analytics: Add your ID in config.py -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-884H2B9G68"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Configuration GA4 avec enhanced measurement
+        gtag('config', 'G-884H2B9G68', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track outbound links (Amazon clicks)
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href*="amazon.com"]');
+            if (link) {
+                const href = link.getAttribute('href');
+                const card = link.closest('.product-card');
+                const title = card?.querySelector('.product-title')?.textContent || 'Unknown';
+                const priceText = card?.querySelector('.product-price')?.textContent || '0';
+                const price = parseFloat(priceText.replace('$', '').replace(',', ''));
+                
+                // Event GA4 standardisé pour clicks Amazon
+                gtag('event', 'click_amazon', {
+                    'event_category': 'outbound',
+                    'event_label': title.trim(),
+                    'product_name': title.trim(),
+                    'price': price,
+                    'value': price,
+                    'link_url': href,
+                    'link_domain': 'amazon.com'
+                });
+                
+                // Aussi envoyer comme outbound_click (standard GA4)
+                gtag('event', 'outbound_click', {
+                    'link_url': href,
+                    'link_domain': 'amazon.com',
+                    'outbound': true
+                });
+            }
+        });
+        
+        // Track page engagement
+        let engagementTimer = 0;
+        setInterval(function() {
+            engagementTimer += 10;
+            if (engagementTimer % 30 === 0) {  // Tous les 30s
+                gtag('event', 'user_engagement', {
+                    'engagement_time_msec': engagementTimer * 1000
+                });
+            }
+        }, 10000);
+    </script>
+    
     <style>
         
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -826,7 +882,7 @@ header .signature-aptive {
             <span class="signature-aptive">by Aptive</span>
             <p class="subtitle">Intel Core I7</p>
             <div class="badge">🤖 Mis à jour automatiquement</div>
-            <p class="update-time">Dernière mise à jour : 2026-02-08 20:13 UTC</p>
+            <p class="update-time">Dernière mise à jour : 2026-02-10 02:28 UTC</p>
         </header>
         
         <div class="products-grid">

@@ -8,7 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Intel Core I5 - RAM Price Check">
     <meta name="description" content="Find the best DDR5 RAM prices • Real-time comparison • Updated automatically">
-    <meta name="keywords" content="DDR5 RAM, RAM prices, memory comparison, Intel Core I5 - RAM Price Check">
+    <meta name="keywords" content="CPU prices, processor comparison, Intel Core, AMD Ryzen, Intel Core I5 - RAM Price Check">
     <meta name="author" content="CPU Price Check">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cpupricecheck.com/Intel_Core_i5_amazon_us_en.html">
@@ -37,7 +37,63 @@
     <script type="application/ld+json">
     [{"@context": "https://schema.org/", "@type": "Product", "name": "Core i5-12600K Desktop Processor with Integrated Graphics and 10 (6P+4E) Cores up to 4.9 GHz Unlocked LGA1700 600 Series Chipset 125W", "image": "https://m.media-amazon.com/images/I/51ugNYlDT1L._AC_UY218_.jpg", "description": "Intel Core I5 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B09FX4D72T?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core™ i5-14400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 4.7 GHz", "image": "https://m.media-amazon.com/images/I/61LuKyXGbKL._AC_UY218_.jpg", "description": "Intel Core I5 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0CQ1M1YXM?tag=aptive-20", "priceCurrency": "USD", "price": "EUR 187.73", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core i5-14400F Desktop Processor 10 cores (6 P-cores + 4 E-cores) up to 4.7 GHz", "image": "https://m.media-amazon.com/images/I/61IgclF1FEL._AC_UY218_.jpg", "description": "Intel Core I5 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0CQ1Y7KHV?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core™ i5-11600KF Desktop Processor 6 Cores up to 4.9 GHz Unlocked LGA1200 (Intel® 500 Series & Select 400 Series Chipset) 125W", "image": "https://m.media-amazon.com/images/I/71O49ggEIrL._AC_UY218_.jpg", "description": "Intel Core I5 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B08X62BTJD?tag=aptive-20", "priceCurrency": "USD", "price": "EUR 126.05", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Core™ Ultra 5 Desktop Processor 225F 10 cores (6 P-cores + 4 E-cores) up to 4.9 GHz", "image": "https://m.media-amazon.com/images/I/51JJfDCTQ3L._AC_UY218_.jpg", "description": "Intel Core I5 - 🔥 BEST PRICE", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0DT7CW7VR?tag=aptive-20", "priceCurrency": "USD", "price": "EUR 122.66", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}]
     </script>
-    <!-- Google Analytics: Add your ID in config.py -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-884H2B9G68"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Configuration GA4 avec enhanced measurement
+        gtag('config', 'G-884H2B9G68', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track outbound links (Amazon clicks)
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href*="amazon.com"]');
+            if (link) {
+                const href = link.getAttribute('href');
+                const card = link.closest('.product-card');
+                const title = card?.querySelector('.product-title')?.textContent || 'Unknown';
+                const priceText = card?.querySelector('.product-price')?.textContent || '0';
+                const price = parseFloat(priceText.replace('$', '').replace(',', ''));
+                
+                // Event GA4 standardisé pour clicks Amazon
+                gtag('event', 'click_amazon', {
+                    'event_category': 'outbound',
+                    'event_label': title.trim(),
+                    'product_name': title.trim(),
+                    'price': price,
+                    'value': price,
+                    'link_url': href,
+                    'link_domain': 'amazon.com'
+                });
+                
+                // Aussi envoyer comme outbound_click (standard GA4)
+                gtag('event', 'outbound_click', {
+                    'link_url': href,
+                    'link_domain': 'amazon.com',
+                    'outbound': true
+                });
+            }
+        });
+        
+        // Track page engagement
+        let engagementTimer = 0;
+        setInterval(function() {
+            engagementTimer += 10;
+            if (engagementTimer % 30 === 0) {  // Tous les 30s
+                gtag('event', 'user_engagement', {
+                    'engagement_time_msec': engagementTimer * 1000
+                });
+            }
+        }, 10000);
+    </script>
+    
     <style>
         
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -826,7 +882,7 @@ header .signature-aptive {
             <span class="signature-aptive">by Aptive</span>
             <p class="subtitle">Intel Core I5</p>
             <div class="badge">🤖 Auto-updated</div>
-            <p class="update-time">Last update: 2026-02-08 20:13 UTC</p>
+            <p class="update-time">Last update: 2026-02-10 02:28 UTC</p>
         </header>
         
         <div class="products-grid">

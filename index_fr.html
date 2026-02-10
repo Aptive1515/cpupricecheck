@@ -8,7 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="RAM Price Check - Trouvez les meilleurs prix RAM DDR5 • Comparaison en temps réel • Mise à jour automatique">
     <meta name="description" content="Trouvez les meilleurs prix RAM DDR5 • Comparaison en temps réel • Mise à jour automatique">
-    <meta name="keywords" content="DDR5 RAM, RAM prices, memory comparison, RAM Price Check - Trouvez les meilleurs prix RAM DDR5 • Comparaison en temps réel • Mise à jour automatique">
+    <meta name="keywords" content="CPU prices, processor comparison, Intel Core, AMD Ryzen, RAM Price Check - Trouvez les meilleurs prix RAM DDR5 • Comparaison en temps réel • Mise à jour automatique">
     <meta name="author" content="CPU Price Check">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cpupricecheck.com/index_fr.html">
@@ -49,7 +49,63 @@
     });
     </script>
     
-    <!-- Google Analytics: Add your ID in config.py -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-884H2B9G68"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Configuration GA4 avec enhanced measurement
+        gtag('config', 'G-884H2B9G68', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track outbound links (Amazon clicks)
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href*="amazon.com"]');
+            if (link) {
+                const href = link.getAttribute('href');
+                const card = link.closest('.product-card');
+                const title = card?.querySelector('.product-title')?.textContent || 'Unknown';
+                const priceText = card?.querySelector('.product-price')?.textContent || '0';
+                const price = parseFloat(priceText.replace('$', '').replace(',', ''));
+                
+                // Event GA4 standardisé pour clicks Amazon
+                gtag('event', 'click_amazon', {
+                    'event_category': 'outbound',
+                    'event_label': title.trim(),
+                    'product_name': title.trim(),
+                    'price': price,
+                    'value': price,
+                    'link_url': href,
+                    'link_domain': 'amazon.com'
+                });
+                
+                // Aussi envoyer comme outbound_click (standard GA4)
+                gtag('event', 'outbound_click', {
+                    'link_url': href,
+                    'link_domain': 'amazon.com',
+                    'outbound': true
+                });
+            }
+        });
+        
+        // Track page engagement
+        let engagementTimer = 0;
+        setInterval(function() {
+            engagementTimer += 10;
+            if (engagementTimer % 30 === 0) {  // Tous les 30s
+                gtag('event', 'user_engagement', {
+                    'engagement_time_msec': engagementTimer * 1000
+                });
+            }
+        }, 10000);
+    </script>
+    
     <style>
         
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -1375,7 +1431,7 @@ header .signature-aptive {
         
         <div class="update-time">
             <span>⏰</span>
-            <span>Mis à jour: 2026-02-08 20:13 UTC</span>
+            <span>Mis à jour: 2026-02-10 02:28 UTC</span>
         </div>
     </header>
     
@@ -1384,7 +1440,7 @@ header .signature-aptive {
         <!-- Comment nous évaluons (Compact) -->
         <div class="rating-explanation-compact">
             <span class="rating-emoji">🧠</span>
-            <strong>Notre évaluation :</strong> Score = (Capacité/Prix) × DDR5 (+30%) × Vitesse (+15%) × Pertinence (32GB optimal)
+            <strong>Notre évaluation :</strong> Score = (Cœurs × Fréquence / Prix) × Architecture (+20%) × TDP × Use Case
             <a href="methodology_fr.html" class="learn-more">En savoir plus</a>
         </div>
         
@@ -1431,7 +1487,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i7-14700KF New Gaming Desktop Processor 20 cores (8 P-cores + 12 E-cores) - Unlocked</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CGJC178L?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1453,7 +1509,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i7-14700K New Gaming Desktop Processor 20 cores (8 P-cores + 12 E-cores) with Integrated Graphics - Unlocked</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CGJ41C9W?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1475,7 +1531,7 @@ header .signature-aptive {
             <h3 class="product-title">BX80677I77700 Core i7-7700 Desktop Processor 8M Cache, 3.6GHz (Max Turbo Frequency 4.20GHz) 7th Generation</h3>
             <div class="product-price">$EUR 86.71</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B01N0L41N7?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1497,7 +1553,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i7-12700K Gaming Desktop Processor with Integrated Graphics and 12 (8P+4E) Cores up to 5.0 GHz Unlocked LGA1700 600 Series Chipset 125W</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09FXNVDBJ?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1519,7 +1575,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i7-14700F Desktop Processor 20 cores (8 P-cores + 12 E-cores) up to 5.4 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ1P2TRN?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1541,7 +1597,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i7-4790K Processor (8M Cache, up to 4.40 GHz) BX80646I74790K</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B00KPRWAX8?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1563,7 +1619,7 @@ header .signature-aptive {
             <h3 class="product-title">Core Ultra 7 Desktop Processor 265K - 20 cores (8 P-cores + 12 E-cores) up to 5.5 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DFK2MH2D?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1585,7 +1641,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i7-8700K Desktop Processor 6 Cores up to 4.7GHz Turbo Unlocked LGA1151 300 Series 95W</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B07598VZR8?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1607,7 +1663,7 @@ header .signature-aptive {
             <h3 class="product-title">BX80677I77700K 7th Gen Pentium Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B01MXSI216?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1629,7 +1685,7 @@ header .signature-aptive {
             <h3 class="product-title">Intel Core i7 6700K 4.00 GHz Unlocked Quad Core Skylake Desktop Processor, Socket LGA 1151 [BX80662I76700K] (Renewed)</h3>
             <div class="product-price">$EUR 68.89</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B07JQ3638R?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1651,7 +1707,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 5700X 8-Core, 16-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$EUR 181.74</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09VCHQHZ6?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1673,7 +1729,7 @@ header .signature-aptive {
             <h3 class="product-title">RYZEN 7 9800X3D 8-Core, 16-Thread Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DKFMSMYK?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1695,7 +1751,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 7700X 8-Core, 16-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BBHHT8LY?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1717,7 +1773,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen™ 7 9700X 8-Core, 16-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0D6NMDNNX?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1739,7 +1795,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BTZB7F88?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1761,7 +1817,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 5700 8-Core, 16-Thread Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ4HPJYV?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1783,7 +1839,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 5800X 8-core, 16-thread unlocked desktop processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0815XFSGK?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1805,7 +1861,7 @@ header .signature-aptive {
             <h3 class="product-title">AMD Ryzen 7 8700F 8-Core Desktop Processor: 16 Threads, 65W TDP with 125W TDP CPU Cooler, 16MB L3 Cache, PCIe 4.0, up to 5.0 GHz Boost, AM5, Zen 4, DDR4, Precision Boost 2, OEM Tray</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0FG4DZH4Y?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1827,7 +1883,7 @@ header .signature-aptive {
             <h3 class="product-title">YD170XBCAEWOF Ryzen 7 1700X Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B06X3W9NGG?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1849,7 +1905,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen™ 7 8700F</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0D2JCMP34?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1871,7 +1927,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 5500 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler</h3>
             <div class="product-price">$EUR 75.27</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09VCJ171S?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1893,7 +1949,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 3400G 4-core, 8-Thread Unlocked Desktop Processor with Radeon RX Graphics</h3>
             <div class="product-price">$EUR 68.52</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B07SXNDKNM?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1915,7 +1971,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 3600 6-core, 12-Thread Unlocked Desktop Processor with Wraith Spire Cooler</h3>
             <div class="product-price">$EUR 118.43</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BL92CBWG?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1937,7 +1993,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 5600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09VCHR1VH?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1959,7 +2015,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 5600GT 6-Core, 12-Thread Desktop Processor</h3>
             <div class="product-price">$EUR 130.27</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ4DTJYX?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -1981,7 +2037,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 8500G 6-Core, 12-Thread Desktop Processor</h3>
             <div class="product-price">$EUR 126.47</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ4JV8D5?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2003,7 +2059,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 5600X 6-core, 12-thread unlocked desktop processor with Wraith Stealth cooler</h3>
             <div class="product-price">$EUR 181.35</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B08166SLDF?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2025,7 +2081,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 7600 6-Core, 12-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BMQJWBDM?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2047,7 +2103,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 5 1600 Processor with Wraith Spire Cooler (YD1600BBAEBOX)</h3>
             <div class="product-price">$EUR 69.74</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B06XNRQHG4?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2069,7 +2125,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen™ 5 5600G 6-Core 12-Thread Desktop Processor with Radeon™ Graphics</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B092L9GF5N?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2091,7 +2147,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i9-14900K Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CGJDKLB8?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2113,7 +2169,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i9-12900K Gaming Desktop Processor with Integrated Graphics and 16 (8P+8E) Cores up to 5.2 GHz Unlocked LGA1700 600 Series Chipset 125W</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09FXDLX95?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2135,7 +2191,7 @@ header .signature-aptive {
             <h3 class="product-title">Core Ultra 9 285K Tetracosa-core [24 Core] 3.70 GHz Processor - OEM Pack - Box</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DFKC99VL?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2157,7 +2213,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i9-12900KF Gaming Desktop Processor 16 (8P+8E) Cores up to 5.2 GHz Unlocked LGA1700 600 Series Chipset 125W</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09FWYK5M9?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2179,7 +2235,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i9-14900KF New Gaming Desktop Processor 24 cores (8 P-cores + 16 E-cores) - Unlocked</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CGJDBCTK?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2201,7 +2257,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ Ultra 9 Desktop Processor 285 24 cores (8 P-cores + 16 E-cores) up to 5.6 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DT7JDLDH?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2223,7 +2279,7 @@ header .signature-aptive {
             <h3 class="product-title">Core Ultra 7 Desktop Processor 265K - 20 cores (8 P-cores + 12 E-cores) up to 5.5 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DFK2MH2D?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2245,7 +2301,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i9-11900KF Desktop Processor 8 Cores up to 5.3 GHz Unlocked LGA1200 (Intel® 500 Series & Select 400 Series Chipset) 125W</h3>
             <div class="product-price">$EUR 412.50</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B08X6KQSZ1?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2267,7 +2323,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i9-14900 Desktop Processor 24 cores (8 P-cores + 16 E-cores) up to 5.8 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ24VW72?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2289,7 +2345,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i9-14900F Desktop Processor 24 cores (8 P-cores + 16 E-cores) up to 5.8 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ1FC8WZ?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2311,7 +2367,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 9 9950X3D 16-Core Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DVZSG8D5?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2333,7 +2389,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen™ 9 9950X 16-Core, 32-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0D6NNRBGP?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2355,7 +2411,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 9 7900 12-Core, 24-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$EUR 348.10</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BMQK718H?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2377,7 +2433,7 @@ header .signature-aptive {
             <h3 class="product-title">RYZEN 7 9800X3D 8-Core, 16-Thread Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DKFMSMYK?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2399,7 +2455,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 9 9900X3D 12-Core Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DWGWN8GY?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2421,7 +2477,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 9 7950X 16-Core, 32-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BBHD5D8Y?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2443,7 +2499,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BTZB7F88?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2465,7 +2521,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen™ 7 9700X 8-Core, 16-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0D6NMDNNX?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2487,7 +2543,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 5700X 8-Core, 16-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$EUR 181.74</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09VCHQHZ6?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2509,7 +2565,7 @@ header .signature-aptive {
             <h3 class="product-title">Ryzen 7 7700X 8-Core, 16-Thread Unlocked Desktop Processor</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BBHHT8LY?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2531,7 +2587,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i5-12600K Desktop Processor with Integrated Graphics and 10 (6P+4E) Cores up to 4.9 GHz Unlocked LGA1700 600 Series Chipset 125W</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09FX4D72T?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2553,7 +2609,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i5-14400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 4.7 GHz</h3>
             <div class="product-price">$EUR 187.73</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ1M1YXM?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2575,7 +2631,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i5-14400F Desktop Processor 10 cores (6 P-cores + 4 E-cores) up to 4.7 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0CQ1Y7KHV?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2597,7 +2653,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ i5-11600KF Desktop Processor 6 Cores up to 4.9 GHz Unlocked LGA1200 (Intel® 500 Series & Select 400 Series Chipset) 125W</h3>
             <div class="product-price">$EUR 126.05</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B08X62BTJD?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2619,7 +2675,7 @@ header .signature-aptive {
             <h3 class="product-title">Core™ Ultra 5 Desktop Processor 225F 10 cores (6 P-cores + 4 E-cores) up to 4.9 GHz</h3>
             <div class="product-price">$EUR 122.66</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0DT7CW7VR?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2641,7 +2697,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i5-13400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 20MB Cache, up to 4.6 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0BQ68QB6R?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2663,7 +2719,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i5 i5-7600 Quad-Core (4 Core) 3.50 GHz Processor - Socket H4 LGA-1151 OEM Pack-Tray Packaging CM8067702868011</h3>
             <div class="product-price">$EUR 50.76</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B06XQ4KP9J?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2685,7 +2741,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i5-3470 3.20 GHz LGA 1155 Processor BX80637I53470</h3>
             <div class="product-price">$EUR 46.53</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B0087EVHVW?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2707,7 +2763,7 @@ header .signature-aptive {
             <h3 class="product-title">Core i5-12400 Desktop Processor 18M Cache, up to 4.40 GHz</h3>
             <div class="product-price">$N/A</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B09NMPD8V2?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {
@@ -2729,7 +2785,7 @@ header .signature-aptive {
             <h3 class="product-title">Intel Core i5-9600K Desktop Processor 6 Cores up to 4.6 GHz Turbo unlocked LGA1151 300 Series 95W (Renewed)</h3>
             <div class="product-price">$EUR 109.97</div>
             
-            
+            <div class="recommendation-badge average">○ Valeur moyenne <span class="score">0.0/10</span></div>
             <div class="score-analysis"><strong>Option Basique :</strong> bon pour budgets serrés.</div>
             <div class="product-actions">
                 <a href="https://www.amazon.com/dp/B089CG1PL8?tag=aptive-20" target="_blank" class="buy-btn" onclick="gtag('event', 'click_amazon', {

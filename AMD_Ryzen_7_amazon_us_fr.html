@@ -8,7 +8,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Amd Ryzen 7 - RAM Price Check">
     <meta name="description" content="Trouvez les meilleurs prix RAM DDR5 • Comparaison en temps réel • Mise à jour automatique">
-    <meta name="keywords" content="DDR5 RAM, RAM prices, memory comparison, Amd Ryzen 7 - RAM Price Check">
+    <meta name="keywords" content="CPU prices, processor comparison, Intel Core, AMD Ryzen, Amd Ryzen 7 - RAM Price Check">
     <meta name="author" content="CPU Price Check">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cpupricecheck.com/AMD_Ryzen_7_amazon_us_fr.html">
@@ -37,7 +37,63 @@
     <script type="application/ld+json">
     [{"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen 7 5700X 8-Core, 16-Thread Unlocked Desktop Processor", "image": "https://m.media-amazon.com/images/I/51gRv8z+K6L._AC_UY218_.jpg", "description": "Amd Ryzen 7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B09VCHQHZ6?tag=aptive-20", "priceCurrency": "USD", "price": "EUR 181.74", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "RYZEN 7 9800X3D 8-Core, 16-Thread Desktop Processor", "image": "https://m.media-amazon.com/images/I/71aHvYUgX1L._AC_UY218_.jpg", "description": "Amd Ryzen 7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0DKFMSMYK?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen 7 7700X 8-Core, 16-Thread Unlocked Desktop Processor", "image": "https://m.media-amazon.com/images/I/51hfER1cZVL._AC_UY218_.jpg", "description": "Amd Ryzen 7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0BBHHT8LY?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen™ 7 9700X 8-Core, 16-Thread Unlocked Desktop Processor", "image": "https://m.media-amazon.com/images/I/61F3ZChalyL._AC_UY218_.jpg", "description": "Amd Ryzen 7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0D6NMDNNX?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}, {"@context": "https://schema.org/", "@type": "Product", "name": "Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor", "image": "https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_UY218_.jpg", "description": "Amd Ryzen 7 - 🔥 MEILLEUR PRIX", "brand": {"@type": "Brand", "name": "Various"}, "offers": {"@type": "Offer", "url": "https://www.amazon.com/dp/B0BTZB7F88?tag=aptive-20", "priceCurrency": "USD", "price": "N/A", "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": "Amazon"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "N/A", "bestRating": "5", "worstRating": "1"}}]
     </script>
-    <!-- Google Analytics: Add your ID in config.py -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-884H2B9G68"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Configuration GA4 avec enhanced measurement
+        gtag('config', 'G-884H2B9G68', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+        });
+        
+        // Track outbound links (Amazon clicks)
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a[href*="amazon.com"]');
+            if (link) {
+                const href = link.getAttribute('href');
+                const card = link.closest('.product-card');
+                const title = card?.querySelector('.product-title')?.textContent || 'Unknown';
+                const priceText = card?.querySelector('.product-price')?.textContent || '0';
+                const price = parseFloat(priceText.replace('$', '').replace(',', ''));
+                
+                // Event GA4 standardisé pour clicks Amazon
+                gtag('event', 'click_amazon', {
+                    'event_category': 'outbound',
+                    'event_label': title.trim(),
+                    'product_name': title.trim(),
+                    'price': price,
+                    'value': price,
+                    'link_url': href,
+                    'link_domain': 'amazon.com'
+                });
+                
+                // Aussi envoyer comme outbound_click (standard GA4)
+                gtag('event', 'outbound_click', {
+                    'link_url': href,
+                    'link_domain': 'amazon.com',
+                    'outbound': true
+                });
+            }
+        });
+        
+        // Track page engagement
+        let engagementTimer = 0;
+        setInterval(function() {
+            engagementTimer += 10;
+            if (engagementTimer % 30 === 0) {  // Tous les 30s
+                gtag('event', 'user_engagement', {
+                    'engagement_time_msec': engagementTimer * 1000
+                });
+            }
+        }, 10000);
+    </script>
+    
     <style>
         
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -826,7 +882,7 @@ header .signature-aptive {
             <span class="signature-aptive">by Aptive</span>
             <p class="subtitle">Amd Ryzen 7</p>
             <div class="badge">🤖 Mis à jour automatiquement</div>
-            <p class="update-time">Dernière mise à jour : 2026-02-08 20:13 UTC</p>
+            <p class="update-time">Dernière mise à jour : 2026-02-10 02:28 UTC</p>
         </header>
         
         <div class="products-grid">
