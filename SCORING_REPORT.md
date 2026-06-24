@@ -1,45 +1,45 @@
-# Rapport de Scoring - 2026-02-10 03:05:47
+# Rapport de Scoring - 2026-06-24 20:56:52
 
 ## 📊 Statistiques Globales
 
 - **Nombre total de produits**: 60
-- **Score moyen**: 2.5/10
+- **Score moyen**: 0.2/10
 - **Score médian**: 0.0/10
 - **Score minimum**: 0.0/10
 - **Score maximum**: 10.0/10
 
 ## 🎯 Distribution des Badges
 
-- 🏆 **Top Choice** (≥8.0): 10 produits (16%)
-- ⭐ **Excellent** (6.0-7.9): 5 produits (8%)
-- ✓ **Good Choice** (5.0-5.9): 3 produits (5%)
-- **Neutral** (<5.0): 42 produits (70%)
+- 🏆 **Top Choice** (≥8.0): 1 produits (1%)
+- ⭐ **Excellent** (6.0-7.9): 0 produits (0%)
+- ✓ **Good Choice** (5.0-5.9): 0 produits (0%)
+- **Neutral** (<5.0): 59 produits (98%)
 
 ## 🏆 Top 10 Produits
 
-1. **10.0/10** - DDR4 8GB @$364 - Core™ i7-14700K New Gaming Desktop Processor 20 cores (8 P-cores + 12 
-2. **10.0/10** - DDR4 8GB @$102 - BX80677I77700 Core i7-7700 Desktop Processor 8M Cache, 3.6GHz (Max Tur
-3. **10.0/10** - DDR4 8GB @$110 - Boxed Core I7-6700 FC-LGA14C 3.40 GHz 8 M Processor Cache 4 LGA 1155 B
-4. **10.0/10** - DDR4 8GB @$89 - Ryzen 5 5500 6-Core, 12-Thread Unlocked Desktop Processor with Wraith 
-5. **10.0/10** - DDR4 8GB @$82 - Ryzen 5 1600 Processor with Wraith Spire Cooler (YD1600BBAEBOX)
-6. **10.0/10** - DDR4 8GB @$60 - Core i5 i5-7600 Quad-Core (4 Core) 3.50 GHz Processor - Socket H4 LGA-
-7. **10.0/10** - DDR4 8GB @$145 - Core™ Ultra 5 Desktop Processor 225F 10 cores (6 P-cores + 4 E-cores) 
-8. **10.0/10** - DDR4 8GB @$55 - Core i5-3470 3.20 GHz LGA 1155 Processor BX80637I53470
-9. **9.3/10** - DDR4 8GB @$149 - Core™ i5-11600KF Desktop Processor 6 Cores up to 4.9 GHz Unlocked LGA1
-10. **8.1/10** - DDR4 8GB @$150 - Core i5-10400F Desktop Processor 6 Cores up to 4.3 GHz Without Process
+1. **10.0/10** - DDR4 8GB @$335 - Intel i9-13900KF Processor: 24-Core, 32-Thread CPU (4.3-5.4 GHz, 125W 
+2. **0.0/10** - DDR4 8GB @$194 - Intel
+3. **0.0/10** - DDR4 8GB @$336 - Intel
+4. **0.0/10** - DDR4 8GB @$344 - Intel
+5. **0.0/10** - DDR4 8GB @$317 - Intel
+6. **0.0/10** - DDR4 8GB @$218 - Intel
+7. **0.0/10** - DDR4 8GB @$329 - Intel
+8. **0.0/10** - DDR4 8GB @$121 - Intel
+9. **0.0/10** - DDR4 8GB @$221 - AMD
+10. **0.0/10** - DDR4 8GB @$222 - Intel
 
 ## ⚠️ Bottom 10 Produits
 
-1. **0.0/10** - DDR4 8GB @$0 - Core™ i5-14600KF Desktop Processor 14 Cores (6 P-Cores + 8 E-Cores) up
-2. **0.0/10** - DDR4 8GB @$0 - Core i5-13600K Desktop Processor 14 cores (6 P-cores + 8 E-cores) 24M 
-3. **0.0/10** - DDR4 8GB @$0 - Core i5-14400F Desktop Processor 10 cores (6 P-cores + 4 E-cores) up t
-4. **0.0/10** - DDR4 8GB @$0 - Core™ i5-14400 Desktop Processor 10 cores (6 P-cores + 4 E-cores) 4.7 
-5. **0.0/10** - DDR4 8GB @$0 - Core i5-12600KF Desktop Processor 10 (6P+4E) Cores up to 4.9 GHz Unloc
-6. **0.0/10** - DDR4 8GB @$0 - Ryzen 7 7700X 8-Core, 16-Thread Unlocked Desktop Processor
-7. **0.0/10** - DDR4 8GB @$0 - Ryzen™ 7 9700X 8-Core, 16-Thread Unlocked Desktop Processor
-8. **0.0/10** - DDR4 8GB @$0 - Ryzen 7 7800X3D 8-Core, 16-Thread Desktop Processor
-9. **0.0/10** - DDR4 8GB @$0 - Ryzen 9 9900X3D 12-Core Processor
-10. **0.0/10** - DDR4 8GB @$0 - RYZEN 7 9800X3D 8-Core, 16-Thread Desktop Processor
+1. **0.0/10** - DDR4 8GB @$163 - Intel
+2. **0.0/10** - DDR4 8GB @$220 - Intel
+3. **0.0/10** - DDR4 8GB @$221 - AMD
+4. **0.0/10** - DDR4 8GB @$344 - Intel
+5. **0.0/10** - DDR4 8GB @$406 - Intel
+6. **0.0/10** - DDR4 8GB @$194 - Intel
+7. **0.0/10** - DDR4 8GB @$203 - Intel
+8. **0.0/10** - DDR4 8GB @$222 - Intel
+9. **0.0/10** - DDR4 8GB @$121 - Intel
+10. **0.0/10** - DDR4 8GB @$281 - Intel
 
 ---
 *Rapport généré automatiquement par generate_site.py v1.4.1*
